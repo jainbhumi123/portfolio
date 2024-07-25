@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO PROJECT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.jpeg" class="logo"> 
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Designer</p>
+                <h1>Hi, I'm <span>Bhumika</span><br> Jain From Jaipur </h1>
+            </div>
+        </div>
+    </div>
+    <!------about-------->
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="pic4.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                   <h1 class="sub-title">About Me</h1>
+                   <p>I am a BCA student with a passion for vlogging, editing, and singing. Proficient in C, C++, HTML, CSS, JavaScript, SQL, Python, and Web Design. I am flexible, reliable, and possess excellent time-keeping skills. I am an enthusiastic, self-motivated, reliable, responsible, and hardworking person. I am a mature team worker and adaptable to all challenging situations.</p>
+                   <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                   </div>
+                   <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>HTML <br>CSS <br>JavaScript <br>C <br>C++ <br> YouTube Vlogging</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Web Development</span><br>Fresher</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>10th</span><br>Vikas Public Sr. Sec School (80.20%)</li>
+                        <li><span>12th</span><br>Modern Public Sr. Sec School (94.20%)</li>
+                        <li><span>BCA (Bachelor of Computer Application)</span><br>JECRC University (2023-2026)</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------Services------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web Design</h2>
+                    <p>Web Design is the process of creating, making, and developing websites. It includes many different features such as webpage layout, webpage content, and designs, which are a brief summary of the basics of codes to design a webpage.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------portfolio--------->
+    <div id="Portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="social media.jpg" alt="">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>Instagram is a photo and video sharing social media application that was launched in 2010 by Kevin Systrom. It is a popular media platform with more than 100 million registered users on Instagram.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work a.jpeg" alt="">
+                    <div class="layer">
+                    <h3>Web Designing</h3>
+                    <p>Web design encompasses many different skills and disciplines in the production and maintenance of websites.</p>
+                </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <!-----------contact-------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>bhumikaj069@gmail.com</p>
+                    <p>6367157346</p>
+                    <div class="social-icons">
+                        <!-- Add social icons here -->
+                    </div>
+                    <a href="my.cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
